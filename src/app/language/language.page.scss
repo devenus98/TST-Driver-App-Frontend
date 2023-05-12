@@ -1,0 +1,23 @@
+ion-list {
+    ion-item {
+        --min-height: 62px;
+        --inner-padding-end: 0;
+        font-size: 16px;
+        --border-color: transparent;
+        border-bottom: 1px solid #bfbfbf;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+ion-footer {
+    padding: 0 10px;
+    &:before {
+        background-image: none!important;
+    }
+    ion-button {
+        margin: 0 0 10px !important;
+        width: 100% !important;
+    }
+}

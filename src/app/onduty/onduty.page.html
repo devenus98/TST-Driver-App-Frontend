@@ -1,0 +1,105 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start" class="btn-left" (click)="router.navigateByUrl('/tabs/dashboard')">
+      <ion-icon name="chevron-back-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title>{{'ONDUTY.TITLE' | translate}}</ion-title>
+    <ion-buttons slot="end" class="btn-right" (click)="sleepmode()">
+      <img src="assets/imgs/sleep-vector.png" alt="">
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="dutyData!==undefined">
+  <div class="ion-padding">
+
+    <div class="graph-length">
+
+      <!--**- Item Graph -**-->
+
+      <div class="date-block">
+        <p>{{dutyData.start_date|date:'dd/MM/yyyy'}} {{dutyData.start_date|date: 'EEEE'}}</p>
+      </div>
+
+      <div class="ride-info">
+
+        <!--- single list --->
+        <div class="single-list">
+          <ion-row>
+            <ion-col size="4">
+              <p><img src="assets/imgs/dash-ic-1.png" alt="">{{'ONDUTY.START' | translate}}</p>
+            </ion-col>
+            <ion-col size="5">
+              <h5>{{dutyData.start_time}}</h5>
+            </ion-col>
+            <ion-col size="3" class="ion-text-end">
+              <ion-button>{{'ACTION.EDIT' | translate}}</ion-button>
+            </ion-col>
+          </ion-row>
+        </div>
+        <!--- /single list --->
+
+      </div>
+
+      <div *ngFor="let sleep of dutyData.sleep">
+        <div class="date-block">
+          <p>{{sleep.sleep_start_date|date:'dd/MM/yyyy'}} {{sleep.sleep_start_date|date: 'EEEE'}}</p>
+        </div>
+
+        <div class="ride-info">
+
+          <!--- single list --->
+          <div class="single-list">
+            <ion-row>
+              <ion-col size="4">
+                <p><img src="assets/imgs/sleep-vector2.png" alt="">{{'ONDUTY.SLEEP' | translate}}</p>
+              </ion-col>
+              <ion-col size="5">
+                <h5>{{sleep.sleep_start}} - {{sleep.sleep_end}}</h5>
+              </ion-col>
+              <ion-col size="3" class="ion-text-end">
+                <ion-button>{{'ACTION.EDIT' | translate}}</ion-button>
+              </ion-col>
+            </ion-row>
+          </div>
+        </div>
+      </div>
+
+      <!--**- Item Graph -**-->
+
+      <div class="date-block" *ngIf="dutyData.end_date">
+        <p>{{dutyData.end_date|date:'dd/MM/yyyy'}} {{dutyData.end_date|date: 'EEEE'}}</p>
+      </div>
+
+      <div class="ride-info" *ngIf="dutyData.end_time">
+
+        <!--- single list --->
+        <div class="single-list">
+          <ion-row>
+            <ion-col size="4">
+              <p><img src="assets/imgs/dash-ic-1.png" alt="">{{'ONDUTY.END' | translate}}</p>
+            </ion-col>
+            <ion-col size="5">
+              <h5>{{dutyData.end_time}}</h5>
+            </ion-col>
+            <ion-col size="3" class="ion-text-end">
+              <ion-button>{{'ACTION.EDIT' | translate}}</ion-button>
+            </ion-col>
+          </ion-row>
+        </div>
+        <!--- /single list --->
+
+
+      </div>
+
+      <!--**- //Item Graph -**-->
+
+    </div>
+
+  </div>
+</ion-content>
+
+
+<ion-footer>
+  <ion-button (click)="PageRoute('sleepmode')">{{'ONDUTY.ENDDUTY' | translate}}</ion-button>
+</ion-footer>

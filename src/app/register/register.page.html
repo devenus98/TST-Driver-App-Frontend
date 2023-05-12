@@ -1,0 +1,96 @@
+<ion-content>
+    <div class="img-full">
+        <img src="assets/imgs/login-img.png">
+    </div>
+    
+    <div class="white-bg">
+        <h4>{{'REGISTER.TITLE' | translate}}</h4>
+        <form [formGroup]="form" (ngSubmit)="submitRegisterData()">
+            <ion-list>
+                <ion-item>
+                    <ion-input placeholder="{{'REGISTER.USERNAME_PLACEHOLDER' | translate}}" formControlName="username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }"></ion-input>
+                    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                        <div *ngIf="f.username.errors.required">{{'REGISTER.USERNAME_ERR_MESSAGE' | translate}}</div>
+                    </div>
+                </ion-item>
+                <ion-item>
+                    <ion-input placeholder="{{'REGISTER.FIRST_NAME_PLACEHOLDER' | translate}}" formControlName="first_name" [ngClass]="{ 'is-invalid': submitted && f.first_name.errors }">
+                    </ion-input>
+                    <div *ngIf="submitted && f.first_name.errors" class="invalid-feedback">
+                        <div *ngIf="f.first_name.errors.required">{{'REGISTER.FIRST_NAME_ERR_MESSAGE' | translate}}
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item>
+                    <ion-input placeholder="{{'REGISTER.LAST_NAME_PLACEHOLDER' | translate}}" formControlName="last_name" [ngClass]="{ 'is-invalid': submitted && f.last_name.errors }">
+                    </ion-input>
+                    <div *ngIf="submitted && f.last_name.errors" class="invalid-feedback">
+                        <div *ngIf="f.last_name.errors.required">{{'REGISTER.LAST_NAME_ERR_MESSAGE' | translate}}</div>
+                    </div>
+                </ion-item>
+
+                <ion-item>
+                    <ion-input type="email" placeholder="{{'REGISTER.EMAIL_ID_PLACEHOLDER' | translate}}" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"></ion-input>
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">{{'REGISTER.EMAIL_ID_ERR_MESSAGE' | translate}}</div>
+                        <div *ngIf="f.email.errors.email">{{'REGISTER.EMAIL_ID_INV_MESSAGE' | translate}}</div>
+                    </div>
+                </ion-item>
+
+                <ion-item>
+                    <ion-input type="text" placeholder="{{'REGISTER.PHONE_NUMBER_PLACEHOLDER' | translate}}" formControlName="phone_number">
+                    </ion-input>
+                </ion-item>
+                <!-- <div *ngIf="submitted && f.phone_number.errors" class="invalid-feedback">
+                    <div *ngIf="f.phone_number.errors.required">{{'REGISTER.PHONE_NUMBER_ERR_MESSAGE' | translate}}
+                    </div>
+                    <div *ngIf="f.phone_number.errors.pattern || f.phone_number.errors.maxlength || f.phone_number.errors.minlength">
+                        {{'REGISTER.PHONE_NUMBER_ISD_ERR' | translate}}</div>
+                </div> -->
+                <ion-item>
+                    <ion-input type="password" placeholder="{{'REGISTER.PASSWORD_PLACEHOLDER' | translate}}" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                    </ion-input>
+                </ion-item>
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">{{'REGISTER.PASSWORD_ERR_MESSAGE' | translate}}</div>
+                    <div *ngIf="f.password.errors.minlength">{{'REGISTER.PASSWORD_LENGTH_ERR' | translate}}</div>
+                    <div *ngIf="f.password.errors.pattern">{{'REGISTER.PASSWORD_FORMATE_ERR' | translate}}</div>
+                </div>
+                <ion-item>
+                    <ion-input type="password" placeholder="{{'REGISTER.PASSWORD_CNF_PLACEHOLDER' | translate}}" formControlName="password2" [ngClass]="{ 'is-invalid': submitted && f.password2.errors }">
+                    </ion-input>
+                </ion-item>
+                <div *ngIf="submitted && f.password2.errors" class="invalid-feedback">
+                    <div *ngIf="f.password2.errors.required">{{'REGISTER.PASSWORD_CNF_ERR_MESSAGE' | translate}}</div>
+                </div>
+                <ion-item>
+                    <ion-select placeholder="Location" formControlName="location">
+                        <ion-select-option value="Worms">Worms </ion-select-option>
+                        <ion-select-option value="Alzey">Alzey</ion-select-option>
+                        <ion-select-option value="Gernsheim">Gernsheim</ion-select-option>
+                    </ion-select>
+                </ion-item>
+                <div *ngIf="submitted && f.location.errors" class="invalid-feedback" [ngClass]="{ 'is-invalid': submitted && f.location.errors }">
+                    <div *ngIf="f.location.errors.required">{{"REGISTER.LOCATION_ERR_MESSAGE" | translate}}</div>
+                </div>
+
+                <ion-item>
+                    <ion-input type="text" placeholder="Hourly price (€)" formControlName="hourly_price">
+                    </ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-datetime displayFormat="MM/DD/YYYY" placeholder="Leaving date" max="2060-12-09" formControlName="leaving_date"></ion-datetime>
+                </ion-item>
+
+            </ion-list>
+            <ion-button type="submit">{{"REGISTER.REGISTER_BTN" | translate}}</ion-button>
+            <div class="btn-middle">
+                <p>
+                    {{"REGISTER.ALREADY_REGISTER" | translate}}
+                    <ion-button type="button" routerLink="/login">{{"REGISTER.LOGIN_BTN" | translate}}</ion-button>
+                </p>
+            </div>
+        </form>
+    </div>
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button color="dark"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>{{'MENU.LOGBOOK' | translate}}</ion-title>
+        <ion-buttons slot="end" class="btn-right">
+            <img src="assets/imgs/fi_filter.png" alt="">
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <table>
+        <thead>
+            <tr>
+                <th>{{'LOGBOOK.DATE' | translate}}</th>
+                <th><img src="assets/imgs/sleep-vector2.png" alt="">{{'LOGBOOK.SLEEP' | translate}}</th>
+                <th><img src="assets/imgs/dash-ic-1.png" alt="">{{'LOGBOOK.ON_DUTY' | translate}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let trip of trips">
+                <td>{{trip.start_date|date:'dd-MM-YY'}} - {{trip.end_date|date:'dd-MM-YY'}}</td>
+                <td>{{trip.sleep_hour}}</td>
+                <td>{{trip.duty_hour}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="no-record-wrap" *ngIf="trips?.length == 0">
+        <img src="assets/imgs/no-record.png" alt="">
+        <p>No record found</p>
+    </div>
+
+</ion-content>

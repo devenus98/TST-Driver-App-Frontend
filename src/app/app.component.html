@@ -1,0 +1,49 @@
+<ion-app>
+    <!--<ion-split-pane contentId="main-content">-->
+
+    <ion-menu contentId="main-content" type="overlay" (ionWillOpen)="ionWillOpen()">
+
+        <ion-content>
+            <div class="user-profile">
+                <h4>Hi! {{name}}</h4>
+            </div>
+
+
+            <ion-list>
+                <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index" menuId="first">
+                    <ion-item class="ion-no-padding" (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i" *ngIf="p.title != 'MENU.LOGOUT'">
+                        <img src="{{p.icon}}">
+                        <div class="title_wrap">
+                            <ion-label>{{ p.title | translate }}</ion-label>
+                        </div>
+                    </ion-item>
+                    <ion-item class="ion-no-padding" (click)="logOut()" *ngIf="p.title == 'MENU.LOGOUT'">
+                        <img src="{{p.icon}}">
+                        <div class="title_wrap">
+                            <ion-label>{{ p.title | translate }}</ion-label>
+                        </div>
+                    </ion-item>
+                </ion-menu-toggle>
+                <!-- <hr style="background-color: #bfbfbf;" /> -->
+                <ion-item class="ion-no-padding" routerDirection="root" lines="none" detail="false">
+                    <!-- <ion-icon name="language-outline"></ion-icon>
+                    <div class="title_wrap">
+                        <ion-label>{{ 'MENU.LANGUAGE' | translate }}</ion-label>
+                    </div> -->
+                    <ion-label>{{ 'MENU.LANGUAGE' | translate }}</ion-label>
+                    <ion-select [ngModel]="lang" (ionChange)="changeLang($event)" interface="action-sheet">
+                        <ion-select-option value="ge">German</ion-select-option>
+                        <ion-select-option value="en">English</ion-select-option>
+                        <ion-select-option value="pl">Polish</ion-select-option>
+                        <ion-select-option value="ru">Russian</ion-select-option>
+                        <ion-select-option value="tr">Turkey</ion-select-option>
+                    </ion-select>
+                </ion-item>
+            </ion-list>
+
+        </ion-content>
+
+    </ion-menu>
+
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-app>

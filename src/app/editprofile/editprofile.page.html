@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" class="btn-left">
+            <ion-back-button text="" icon="chevron-back-outline" color="dark"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'PROFILE.UPDATE_PROFILE' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form action="" [formGroup]="formGroup" (ngSubmit)="submitUpdateProfileData()">
+        <div class="ion-padding">
+            <div class="headline-area">
+                <h3>{{'PROFILE.UPDATE_PROFILE_LABLE' | translate}}</h3>
+            </div>
+            <ion-list>
+
+                <ion-item>
+                    <ion-label position="floating">{{'PROFILE.FIRST_NAME' | translate}}</ion-label>
+                    <ion-input type="text" formControlName="first_name"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="floating">{{'PROFILE.LAST_NAME' | translate}}</ion-label>
+                    <ion-input type="text" formControlName="last_name"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="floating">{{'PROFILE.EMAIL' | translate}}</ion-label>
+                    <ion-input type="email" formControlName="email"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="floating">{{'PROFILE.PHONE' | translate}}</ion-label>
+                    <ion-input type="tel" formControlName="phone_number"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="floating">{{'PROFILE.DOB' | translate}}</ion-label>
+                    <ion-datetime displayFormat="DD-MM-YYYY" formControlName="birth_date"></ion-datetime>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="floating">{{'PROFILE.BIO' | translate}}</ion-label>
+                    <ion-textarea type="text" formControlName="bio"></ion-textarea>
+                </ion-item>
+
+            </ion-list>
+
+        </div>
+    </form>
+</ion-content>
+
+<ion-footer>
+    <ion-button (click)="submitUpdateProfileData()">{{'PROFILE.SAVE' | translate}}</ion-button>
+</ion-footer>

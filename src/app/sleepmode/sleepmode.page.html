@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start" class="btn-left">
+      <ion-back-button text="" icon="chevron-back-outline" color="dark"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{'SLEEPMODE.TITLE' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="sleepData!==undefined">
+  <div class="ion-padding">
+    <div class="card-wrap">
+      <h4><img src="assets/imgs/sleep-vector.png" alt="">{{'SLEEPMODE.TITLE' | translate}}</h4>
+      <p>{{now | date:'dd-MM-YY'}}</p>
+      <h2>{{time|date:'HH:mm:ss'}}</h2>
+      <ion-button (click)="PageRoute('resumedutyhour')">{{'SLEEPMODE.RESUME' | translate}}</ion-button>
+    </div>
+  </div>
+</ion-content>

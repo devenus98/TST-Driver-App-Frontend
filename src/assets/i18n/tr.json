@@ -1,0 +1,150 @@
+{
+    "MENU": {
+        "DASHBOARD": "Gösterge Paneli",
+        "LOGBOOK": "seyir defteri",
+        "MY_LEAVES": "Yapraklarım",
+        "APPLY_FOR_LEAVES": "İzin Başvurusu",
+        "CHANGE_PASSWORD": "Şifre değiştir",
+        "LOGOUT": "Çıkış Yap",
+        "START": "Başlangıç",
+        "LANGUAGE": "Dilim",
+        "NOTIFICATION": "Bildirim"
+    },
+    "ACTION": {
+        "EDIT": "Düzenlemek",
+        "SAVE": "Kayıt etmek",
+        "SUBMIT": "Göndermek"
+    },
+    "LOGIN": {
+        "WELCOME_NOTE": "TST Sürücü Uygulamasına Hoş Geldiniz",
+        "FORGOT_PASSWORD": "PAROLANIZI MI UNUTTUNUZ",
+        "LOGIN": "Giriş yapmak",
+        "REGISTER": "Kayıt olmak",
+        "REGISTER_LABLE": "Burada yeni misin?",
+        "USERNAME": "Kullanıcı adı girin",
+        "PASSWORD": "Şifre girin"
+    },
+    "FORGOT": {
+        "PAGE_HEADING": "Parolanızı mı unuttunuz",
+        "BACK_LOGIN": "Girişe Geri Dön",
+        "VERIFY_OTP": "OTP'yi doğrulayın",
+        "SET_PASSWORD": "Yeni Şifre Belirle",
+        "RESET_LABEL": "Göndermek"
+    },
+    "DASHBOARD": {
+        "TOTAL_DUTY_HOURS": "Toplam Görev Saatleri",
+        "LEAVES_TAKEN": "Alınan Yapraklar",
+        "TRIPS_COMPLETED": "Tamamlanan Geziler"
+    },
+    "START": {
+        "START_DUTY": "Göreve Başla",
+        "START_DATE": "Başlangıç ​​tarihi",
+        "START_TIME": "Başlangıç ​​saati"
+    },
+    "LOGBOOK": {
+        "SLEEP": "Uyku",
+        "ON_DUTY": "Görevde",
+        "DATE": "Tarih"
+    },
+    "MY_LEAVES": {
+        "APPROVED": "Onaylandı",
+        "PENDING": "Bekliyor",
+        "DECLINED": "reddedildi",
+        "APPROVED_ON": "Onaylanma Tarihi",
+        "DECLINED_ON": "Reddedilme Tarihi",
+
+        "SUGGESTED": "ÖNERİLEN",
+        "SUGGESTED_HEAD": "Başvurduğunuz izin için yöneticiden bir İzin Öneriniz var ",
+        "SUGGESTED_SUBHEAD": "Kabul Etme / Reddetme seçeneğiniz var",
+        "ACCEPT": "Kabul et",
+        "DECLINE": "Düşüş"
+    },
+    "LEAVE_REQUEST": {
+        "FROM_DATE": "İtibaren",
+        "NORMAL": "Normal",
+        "EMERGENCY": "Acil Durum",
+        "SAVE": "Değişikliği kaydet",
+        "TO_DATE": "Bugüne kadar",
+        "MESSAGE": "İleti",
+        "MESSAGE_PLACEHOLDER": "İleti",
+        "LEAVE_TYPE": "Bırak Türü",
+        "SLECIAL_LEAVE_REASON": "Özel izin nedeni",
+        "URLAUB": "Urlaub",
+        "SONDERURLAUB": "Sonderurlaub",
+        "KRANK": "Krank",
+        "ZEITAUSGLEICH": "Zeitausgleich",
+        "CHILD_MARRIAGE": "Marriage of a child",
+        "MOVIING_WITHIN_PLACE": "Moving within the place",
+        "EXAMINATION_IN_TRAINING_OCCUPATION": "Examination in the training occupation",
+        "SPOUSE_DEATH": "Death of spouse or partner",
+        "CHILD_DEATH": "Death of the child",
+        "PARENT_DEATH": "Death of a parent or step-parent",
+        "PARENT_INLAW_DEATH": "Death of a parent-in-law",
+        "OWN_MARRIAGE": "Own Marriage",
+        "CHILD_BIRTH": "Birth of one's own child",
+        "MOVING_OUT_OF_TOWN": "Moving out of town",
+        "LEAVE_REQUEST": "İzin İste"
+    },
+    "CHANGE_PASSWORD": {
+        "CURRENT_PASSWORD": "Güncel şifrenizi giriniz",
+        "NEW_PASSWORD": "Yeni Şifreyi Girin",
+        "CONFIRM_NEW_PASSWORD": "Yeni şifreyi onayla",
+        "SAVE": "Kayıt etmek",
+        "CREATE_PASSWORD": "Şifreni oluştur",
+        "CONTINUE": "Devam et"
+    },
+    "PROFILE": {
+        "HEADING": "Profil",
+        "UPDATE_PROFILE": "Profili Güncelle",
+        "UPDATE_PROFILE_LABLE": "Profilinizi güncelleyelim",
+        "FULLNAME": "Ad Soyad",
+        "FIRST_NAME": "İlk adı",
+        "LAST_NAME": "Soyadı",
+        "EMAIL": "E",
+        "PHONE": "Telefon numarası",
+        "BIO": "biyo",
+        "DOB": "Doğum tarihi",
+        "SAVE": "Değişikliği kaydet"
+    },
+    "ONDUTY": {
+        "TITLE": "Görevde",
+        "ENDDUTY": "Bitiş Görevi",
+        "START": "Başlangıç",
+        "END": "Son",
+        "SLEEP": "Uyku",
+        "REVIEW_LABEL": "Görev Saatlerini İnceleyin",
+        "HOURS": "hrs",
+        "DATE": "Tarih",
+        "TIME": "Zaman"
+    },
+    "SLEEPMODE": {
+        "TITLE": "Uyku modu",
+        "RESUME": "Sürüşe Devam Et"
+    },
+    "REGISTER": {
+        "TITLE": "TST Sürücü Uygulamasına Hoş Geldiniz",
+        "ALREADY_REGISTER": "Zaten kayıtlı?",
+        "REGISTER_BTN": "Kayıt olmak",
+        "LOGIN_BTN": "GİRİŞ YAPMAK",
+        "FIRST_NAME_PLACEHOLDER": "İlk adı",
+        "LAST_NAME_PLACEHOLDER": "Soyadı",
+        "USERNAME_PLACEHOLDER": "Kullanıcı adı",
+        "EMAIL_ID_PLACEHOLDER": "Email kimliği",
+        "PHONE_NUMBER_PLACEHOLDER": "Telefon numarası",
+        "PASSWORD_PLACEHOLDER": "Parola",
+        "PASSWORD_CNF_PLACEHOLDER": "Şifreyi Onayla",
+        "LOCATION_PLACEHOLDER": "Konum",
+        "FIRST_NAME_ERR_MESSAGE": "Ad gerekli",
+        "LAST_NAME_ERR_MESSAGE": "Soyadı gerekli",
+        "USERNAME_ERR_MESSAGE": "Kullanıcı adı gerekli",
+        "EMAIL_ID_ERR_MESSAGE": "E-posta kimliği gerekli",
+        "EMAIL_ID_INV_MESSAGE": "E-posta kimliği geçersiz",
+        "PHONE_NUMBER_ERR_MESSAGE": "Telefon numarası gerekli",
+        "PHONE_NUMBER_ISD_ERR": "Telefon numarası ülke koduyla birlikte olmalıdır",
+        "PASSWORD_ERR_MESSAGE": "Şifre gereklidir",
+        "PASSWORD_CNF_ERR_MESSAGE": "Her iki Şifre de eşleşmelidir",
+        "PASSWORD_LENGTH_ERR": "Şifre en az 8 karakter olmalıdır",
+        "PASSWORD_FORMATE_ERR": "Şifre bir harf, bir rakam ve bir özel karakterden oluşmalıdır.",
+        "LOCATION_ERR_MESSAGE": "Konum gerekli"
+    }
+}

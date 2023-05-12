@@ -1,0 +1,119 @@
+ion-content {
+  --background: #eaeaea;
+}
+.ion-padding {
+  padding: 0 16px;
+}
+
+.graph-length {
+  border-left: 5px solid #d2d2d2;
+  padding-top: 30px;
+}
+
+.date-block {
+  background: #00AEEF;
+  padding: 10px 30px 9px;
+  p {
+    color: #fff;
+    margin: 0;
+  }
+}
+
+.ride-info {
+  padding-top: 20px;
+  padding-bottom: 12px;
+  .single-list {
+    margin-bottom: 10px;
+    position: relative;
+    &:before {
+      content: "";
+      left: 0;
+      top: 27px;
+      display: block;
+      background: #d2d2d2;
+      height: 4px;
+      width: 26px;
+      position: absolute;
+    }
+    ion-row {
+      background: #FFFFFF;
+      border: 1px solid #EEEEEE;
+      box-sizing: border-box;
+      border-radius: 4px;
+      padding: 4px 10px;
+      width: 92%;
+      margin: 0 0 0 auto;
+    }
+    p {
+      font-size: 13px;
+      line-height: 16px;
+      color: #4F5556;
+      margin: 10px 0;
+      img {
+        width: 16px;
+        height: 16px;
+        vertical-align: sub;
+        margin-right: 5px;
+        margin-left: 6px;
+      }
+    }
+    h5 {
+      font-size: 16px;
+      margin: 9px 0;
+      letter-spacing: .6px;
+    }
+    ion-button {
+      margin: 0;
+      --box-shadow: 0;
+      color: #00AEEF;
+      --background: transparent;
+      text-transform: uppercase;
+      font-size: 14px;
+      height: 2.4rem;
+    }
+  }
+}
+
+.total-hours {
+  background: #FFFFFF;
+  border: 1px solid #EEEEEE;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 4px 10px;
+  margin: 50px 0 30px;
+  h6 {
+    font-size: 14px;
+    margin: 7px 0;
+  }
+  ion-row {
+    text-align: center;
+  }
+  h2 {
+    font-size: 26px;
+    line-height: 44px;
+    color: #4F5556;
+    margin: 4px 0;
+    span {
+      font-size: 18px;
+    }
+  }
+  p {
+    font-size: 12px;
+    margin: 3px 0;
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.full-button {
+  background: #eaeaea;
+  text-align: center;
+  padding: 10px 18px;
+  margin-bottom: 10px;
+  ion-button {
+    margin: 0;
+    width: 100% !important;
+  }
+}

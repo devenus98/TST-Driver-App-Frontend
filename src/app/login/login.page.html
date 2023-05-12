@@ -1,0 +1,42 @@
+<ion-content>
+
+    <div class="img-full">
+        <img src="assets/imgs/login-img.png">
+    </div>
+
+    <div class="white-bg">
+        <h4>{{'LOGIN.WELCOME_NOTE' | translate}}</h4>
+        <form method="POST" [formGroup]="form" (ngSubmit)="submitLoginForm()" (keyup.enter)="submitLoginForm()">
+            <ion-list>
+                <ion-item>
+                    <ion-input placeholder="{{'LOGIN.USERNAME' | translate}}" formControlName="username" required>
+                    </ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-input type="{{type}}" placeholder="{{'LOGIN.PASSWORD' | translate}}" formControlName="password" required>
+                    </ion-input>
+                    <a class="type-toggle" (click)="toggleShow()">
+                        <ion-icon class="show-option" [hidden]="showPassword" name="eye-off-outline"></ion-icon>
+                        <ion-icon class="hide-option" [hidden]="!showPassword" name="eye-outline"></ion-icon>
+                    </a>
+                </ion-item>
+            </ion-list>
+
+            <div class="btn-forget ion-text-end">
+                <ion-button type="button" (click)="redirectToExterNalLink()">
+                    {{'LOGIN.FORGOT_PASSWORD' | translate}}
+                </ion-button>
+            </div>
+            <ion-button type="submit" [disabled]="shouldDisabled">{{'LOGIN.LOGIN' | translate}}
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+            </ion-button>
+
+            <!-- <div class="btn-middle">
+                <p>
+                    {{'LOGIN.REGISTER_LABLE' | translate}}
+                    <ion-button type="button" routerLink="/register">{{'LOGIN.REGISTER' | translate}}</ion-button>
+                </p>
+            </div> -->
+        </form>
+    </div>
+</ion-content>

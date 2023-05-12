@@ -1,0 +1,26 @@
+ion-tabs {
+  ion-tab-bar {
+    height: 64px;
+    ion-tab-button {
+      img {
+        width: 74px;
+        margin-top: 2px;
+      }
+      &:nth-child(1), &:nth-child(3) {
+        border-top: 2px solid transparent;
+      }
+    }
+    .tab-selected {
+      ion-label {
+        color: #D70080;
+      }
+      ion-icon {
+        color: #D70080;
+      }
+      &:nth-child(1), &:nth-child(3) {
+        border-top: 2px solid #d70080;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start" class="btn-left">
+            <ion-back-button text="" icon="chevron-back-outline" color="dark"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'PROFILE.HEADING' | translate}}</ion-title>
+        <ion-buttons slot="end" class="btn-right" (click)="router.navigateByUrl('/updateprofile')">
+            <ion-icon name="create-outline"></ion-icon> {{'ACTION.EDIT' | translate}}
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="profile-image">
+        <div class="ion-padding">
+            <div class="pro_image">
+                <div class="content_upload">
+                    <img [src]="imageUrl ? imageUrl : 'assets/imgs/blank_user.png'" alt="">
+                    <ion-button class="btn-transparent" (click)="takePicture()">
+                        <ion-icon name="camera"></ion-icon>
+                    </ion-button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pro-info" *ngIf="userInfo">
+
+        <div class="ion-padding">
+            <h4>{{'PROFILE.FULLNAME' | translate}}</h4>
+            <p>{{userInfo.first_name}} {{userInfo.last_name}}</p>
+
+            <h4>{{'PROFILE.EMAIL' | translate}}</h4>
+            <p>{{userInfo.email}}</p>
+
+            <h4>{{'PROFILE.PHONE' | translate}}</h4>
+            <p>{{userInfo.phone_number}}</p>
+
+            <h4>{{'PROFILE.BIO' | translate}}</h4>
+            <p>{{userInfo.bio}}</p>
+
+            <h4>{{'PROFILE.DOB' | translate}}</h4>
+            <p>{{userInfo.birth_date|date:'dd-MM-YYYY'}}</p>
+
+        </div>
+
+    </div>
+
+
+</ion-content>

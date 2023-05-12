@@ -1,0 +1,150 @@
+{
+    "MENU": {
+        "DASHBOARD": "Приборная панель",
+        "LOGBOOK": "Логбук",
+        "MY_LEAVES": "Мои листья",
+        "APPLY_FOR_LEAVES": "Подать заявление на отпуск",
+        "CHANGE_PASSWORD": "Изменить пароль",
+        "LOGOUT": "Выход из системы",
+        "START": "Начало",
+        "LANGUAGE": "Язык",
+        "NOTIFICATION": "Уведомление"
+    },
+    "ACTION": {
+        "EDIT": "Редактировать",
+        "SAVE": "Сохранить",
+        "SUBMIT": "Отправить"
+    },
+    "LOGIN": {
+        "WELCOME_NOTE": "Добро пожаловать в приложение для водителей TST",
+        "FORGOT_PASSWORD": "ЗАБЫТЫЙ ПАРОЛЬ",
+        "LOGIN": "Вход в систему",
+        "REGISTER": "Зарегистрироваться",
+        "REGISTER_LABLE": "Вы здесь недавно?",
+        "USERNAME": "Введите имя пользователя",
+        "PASSWORD": "Введите пароль"
+    },
+    "FORGOT": {
+        "PAGE_HEADING": "Забыли пароль",
+        "BACK_LOGIN": "Назад К входу",
+        "VERIFY_OTP": "Проверить ОТП",
+        "SET_PASSWORD": "Установите новый пароль",
+        "RESET_LABEL": "Отправить"
+    },
+    "DASHBOARD": {
+        "TOTAL_DUTY_HOURS": "Общее количество дежурных часов",
+        "LEAVES_TAKEN": "Взятые листья",
+        "TRIPS_COMPLETED": "Выполненные поездки"
+    },
+    "START": {
+        "START_DUTY": "Стартовый долг",
+        "START_DATE": "Дата начала",
+        "START_TIME": "Время начала"
+    },
+    "LOGBOOK": {
+        "SLEEP": "Сон",
+        "ON_DUTY": "Дежурный",
+        "DATE": "Дата"
+    },
+    "MY_LEAVES": {
+        "APPROVED": "Одобрено",
+        "PENDING": "В ожидании",
+        "DECLINED": "Отклонено",
+        "APPROVED_ON": "Одобрено",
+        "DECLINED_ON": "Отказано",
+
+        "SUGGESTED": "Снижение",
+        "SUGGESTED_HEAD": "У вас есть Предложение об отпуске от администратора для вашего заявленного отпуска ",
+        "SUGGESTED_SUBHEAD": "У вас есть возможность принять/отклонить",
+        "ACCEPT": "Принять",
+        "DECLINE": "Снижение"
+    },
+    "LEAVE_REQUEST": {
+        "FROM_DATE": "От даты",
+        "NORMAL": "Нормальный",
+        "EMERGENCY": "Чрезвычайная ситуация",
+        "SAVE": "Сохранить изменения",
+        "TO_DATE": "На сегодняшний день",
+        "MESSAGE": "Сообщение",
+        "MESSAGE_PLACEHOLDER": "Сообщение",
+        "LEAVE_TYPE": "Тип отпуска",
+        "SLECIAL_LEAVE_REASON": "Причина специального отпуска",
+        "URLAUB": "Urlaub",
+        "SONDERURLAUB": "Sonderurlaub",
+        "KRANK": "Krank",
+        "ZEITAUSGLEICH": "Zeitausgleich",
+        "CHILD_MARRIAGE": "Marriage of a child",
+        "MOVIING_WITHIN_PLACE": "Moving within the place",
+        "EXAMINATION_IN_TRAINING_OCCUPATION": "Examination in the training occupation",
+        "SPOUSE_DEATH": "Death of spouse or partner",
+        "CHILD_DEATH": "Death of the child",
+        "PARENT_DEATH": "Death of a parent or step-parent",
+        "PARENT_INLAW_DEATH": "Death of a parent-in-law",
+        "OWN_MARRIAGE": "Own Marriage",
+        "CHILD_BIRTH": "Birth of one's own child",
+        "MOVING_OUT_OF_TOWN": "Moving out of town",
+        "LEAVE_REQUEST": "Заявление на отпуск"
+    },
+    "CHANGE_PASSWORD": {
+        "CURRENT_PASSWORD": "Введите текущий пароль",
+        "NEW_PASSWORD": "Введите новый пароль",
+        "CONFIRM_NEW_PASSWORD": "Подтверждение нового пароля",
+        "SAVE": "Сохранить",
+        "CREATE_PASSWORD": "Создайте свой пароль",
+        "CONTINUE": "Продолжить"
+    },
+    "PROFILE": {
+        "HEADING": "Профиль",
+        "UPDATE_PROFILE": "Обновить профиль",
+        "UPDATE_PROFILE_LABLE": "Давайте обновим ваш профиль",
+        "FULLNAME": "Полное имя",
+        "FIRST_NAME": "Имя",
+        "LAST_NAME": "Фамилия",
+        "EMAIL": "Адрес электронной почты",
+        "PHONE": "Номер телефона",
+        "BIO": "Био",
+        "DOB": "Дата рождения",
+        "SAVE": "Сохранить изменения"
+    },
+    "ONDUTY": {
+        "TITLE": "Дежурный",
+        "ENDDUTY": "Конечный долг",
+        "START": "Начало",
+        "END": "Конец",
+        "SLEEP": "Сон",
+        "REVIEW_LABEL": "Обзор дежурных часов",
+        "HOURS": "hrs",
+        "DATE": "Дата",
+        "TIME": "Время"
+    },
+    "SLEEPMODE": {
+        "TITLE": "Режим сна",
+        "RESUME": "Вождение автомобиля"
+    },
+    "REGISTER": {
+        "TITLE": "Добро пожаловать в приложение для водителей TST",
+        "ALREADY_REGISTER": " Уже зарегистрировались?",
+        "REGISTER_BTN": "Зарегистрироваться",
+        "LOGIN_BTN": "LOGIN",
+        "FIRST_NAME_PLACEHOLDER": "Имя",
+        "LAST_NAME_PLACEHOLDER": "Фамилия",
+        "USERNAME_PLACEHOLDER": "Имя пользователя",
+        "EMAIL_ID_PLACEHOLDER": "Идентификатор электронной почты",
+        "PHONE_NUMBER_PLACEHOLDER": "Номер телефона",
+        "PASSWORD_PLACEHOLDER": "Пароль",
+        "PASSWORD_CNF_PLACEHOLDER": "Подтверждение пароля",
+        "LOCATION_PLACEHOLDER": "Местонахождение",
+        "FIRST_NAME_ERR_MESSAGE": "Имя и фамилия обязательны",
+        "LAST_NAME_ERR_MESSAGE": "Фамилия обязательна",
+        "USERNAME_ERR_MESSAGE": "Имя пользователя обязательно",
+        "EMAIL_ID_ERR_MESSAGE": "Требуется идентификатор электронной почты",
+        "EMAIL_ID_INV_MESSAGE": "Идентификатор электронной почты недействителен",
+        "PHONE_NUMBER_ERR_MESSAGE": "Номер телефона обязателен",
+        "PHONE_NUMBER_ISD_ERR": "Номер телефона должен быть с кодом страны",
+        "PASSWORD_ERR_MESSAGE": "Требуется пароль",
+        "PASSWORD_CNF_ERR_MESSAGE": "Оба пароля должны совпадать",
+        "PASSWORD_LENGTH_ERR": "Пароль должен состоять не менее чем из 8 символов",
+        "PASSWORD_FORMATE_ERR": "Пароль должен состоять из одной буквы алфавита, одной цифры и одного специального символа.",
+        "LOCATION_ERR_MESSAGE": "Требуется местонахождение"
+    }
+}

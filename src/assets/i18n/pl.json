@@ -1,0 +1,150 @@
+{
+    "MENU": {
+        "DASHBOARD": "Tablica rozdzielcza",
+        "LOGBOOK": "Logbook",
+        "MY_LEAVES": "Moje liście",
+        "APPLY_FOR_LEAVES": "Złóż wniosek o urlop",
+        "CHANGE_PASSWORD": "Zmiana hasła",
+        "LOGOUT": "Wyloguj się",
+        "START": "Start",
+        "LANGUAGE": "Język",
+        "NOTIFICATION": "Zgłoszenie"
+    },
+    "ACTION": {
+        "EDIT": "Edytuj",
+        "SAVE": "Zapisz",
+        "SUBMIT": "Prześlij"
+    },
+    "LOGIN": {
+        "WELCOME_NOTE": "Witamy w aplikacji dla kierowców TST",
+        "FORGOT_PASSWORD": "ZAPOMNIANE HASŁO",
+        "LOGIN": "Login",
+        "REGISTER": "Rejestr",
+        "REGISTER_LABLE": "Czy jesteś tu nowy?",
+        "USERNAME": "Wpisz nazwę użytkownika",
+        "PASSWORD": "Wprowadź hasło"
+    },
+    "FORGOT": {
+        "PAGE_HEADING": "ZAPOMNIANE HASŁO",
+        "BACK_LOGIN": "Powrót do logowania",
+        "VERIFY_OTP": "Weryfikacja OTP",
+        "SET_PASSWORD": "Ustaw nowe hasło",
+        "RESET_LABEL": "Prześlij"
+    },
+    "DASHBOARD": {
+        "TOTAL_DUTY_HOURS": "Godziny dyżurów",
+        "LEAVES_TAKEN": "Zabrane liście",
+        "TRIPS_COMPLETED": "Zrealizowane podróże"
+    },
+    "START": {
+        "START_DUTY": "Rozpoczęcie dyżuru",
+        "START_DATE": "Data rozpoczęcia",
+        "START_TIME": "Godzina rozpoczęcia"
+    },
+    "LOGBOOK": {
+        "SLEEP": "Sen",
+        "ON_DUTY": "Na służbie",
+        "DATE": "Data"
+    },
+    "MY_LEAVES": {
+        "APPROVED": "Zatwierdzony",
+        "PENDING": "W trakcie realizacji",
+        "DECLINED": "Odrzucony",
+        "APPROVED_ON": "Zatwierdzony w dniu",
+        "DECLINED_ON": "Odrzucono w dniu",
+
+        "SUGGESTED": "Proponowane",
+        "SUGGESTED_HEAD": "Masz Sugestię dotyczącą urlopu od administratora w odniesieniu do zastosowanego urlopu",
+        "SUGGESTED_SUBHEAD": "Masz możliwość akceptacji/odrzucenia",
+        "ACCEPT": "Przyjmij",
+        "DECLINE": "Spadek"
+    },
+    "LEAVE_REQUEST": {
+        "FROM_DATE": "From Date",
+        "NORMAL": "Normalna",
+        "EMERGENCY": "Emergency",
+        "SAVE": "Zapisz zmianę",
+        "TO_DATE": "Do dnia dzisiejszego",
+        "MESSAGE": "Wiadomość",
+        "MESSAGE_PLACEHOLDER": "Wiadomość",
+        "LEAVE_TYPE": "Rodzaj urlopu",
+        "SLECIAL_LEAVE_REASON": "Przyczyna urlopu okolicznościowego",
+        "URLAUB": "Urlaub",
+        "SONDERURLAUB": "Sonderurlaub",
+        "KRANK": "Krank",
+        "ZEITAUSGLEICH": "Zeitausgleich",
+        "CHILD_MARRIAGE": "Marriage of a child",
+        "MOVIING_WITHIN_PLACE": "Moving within the place",
+        "EXAMINATION_IN_TRAINING_OCCUPATION": "Examination in the training occupation",
+        "SPOUSE_DEATH": "Death of spouse or partner",
+        "CHILD_DEATH": "Death of the child",
+        "PARENT_DEATH": "Death of a parent or step-parent",
+        "PARENT_INLAW_DEATH": "Death of a parent-in-law",
+        "OWN_MARRIAGE": "Own Marriage",
+        "CHILD_BIRTH": "Birth of one's own child",
+        "MOVING_OUT_OF_TOWN": "Moving out of town",
+        "LEAVE_REQUEST": "Wniosek o urlop"
+    },
+    "CHANGE_PASSWORD": {
+        "CURRENT_PASSWORD": "Wprowadź aktualne hasło",
+        "NEW_PASSWORD": "Wprowadź nowe hasło",
+        "CONFIRM_NEW_PASSWORD": "Potwierdź nowe hasło",
+        "SAVE": "Zapisz",
+        "CREATE_PASSWORD": "Utwórz swoje hasło",
+        "CONTINUE": "Kontynuuj"
+    },
+    "PROFILE": {
+        "HEADING": "Profil",
+        "UPDATE_PROFILE": "Profil aktualizacji",
+        "UPDATE_PROFILE_LABLE": "Zaktualizujmy Twój profil",
+        "FULLNAME": "Imię i nazwisko",
+        "FIRST_NAME": "Imię",
+        "LAST_NAME": "Nazwisko",
+        "EMAIL": "Adres e-mail",
+        "PHONE": "Numer telefonu",
+        "BIO": "Numer telefonu",
+        "DOB": "Data urodzenia",
+        "SAVE": "Zapisz zmianę"
+    },
+    "ONDUTY": {
+        "TITLE": "Na służbie",
+        "ENDDUTY": "Koniec Cło",
+        "START": "Start",
+        "END": "Koniec",
+        "SLEEP": "Sen",
+        "REVIEW_LABEL": "Przegląd godzin dyżurów",
+        "HOURS": "hrs",
+        "DATE": "Data",
+        "TIME": "Czas"
+    },
+    "SLEEPMODE": {
+        "TITLE": "Tryb uśpienia",
+        "RESUME": "Resume Driving"
+    },
+    "REGISTER": {
+        "TITLE": "Witamy w aplikacji dla kierowców TST",
+        "ALREADY_REGISTER": " Jesteś już zarejestrowany?",
+        "REGISTER_BTN": "Rejestr",
+        "LOGIN_BTN": "LOGIN",
+        "FIRST_NAME_PLACEHOLDER": "Imię",
+        "LAST_NAME_PLACEHOLDER": "Nazwisko",
+        "USERNAME_PLACEHOLDER": "Nazwa użytkownika",
+        "EMAIL_ID_PLACEHOLDER": "Email ID",
+        "PHONE_NUMBER_PLACEHOLDER": "Numer telefonu",
+        "PASSWORD_PLACEHOLDER": "Hasło",
+        "PASSWORD_CNF_PLACEHOLDER": "Potwierdź hasło",
+        "LOCATION_PLACEHOLDER": "Lokalizacja",
+        "FIRST_NAME_ERR_MESSAGE": "Wymagane jest podanie imienia i nazwiska",
+        "LAST_NAME_ERR_MESSAGE": "Nazwisko jest wymagane",
+        "USERNAME_ERR_MESSAGE": "Wymagana jest nazwa użytkownika",
+        "EMAIL_ID_ERR_MESSAGE": "Wymagany jest identyfikator e-mail",
+        "EMAIL_ID_INV_MESSAGE": "Identyfikator e-mail jest nieprawidłowy",
+        "PHONE_NUMBER_ERR_MESSAGE": "Wymagany jest numer telefonu",
+        "PHONE_NUMBER_ISD_ERR": "Numer telefonu musi być z numerem kierunkowym kraju",
+        "PASSWORD_ERR_MESSAGE": "Hasło jest wymagane",
+        "PASSWORD_CNF_ERR_MESSAGE": "Oba hasła powinny być zgodne",
+        "PASSWORD_LENGTH_ERR": "Hasło musi składać się z co najmniej 8 znaków",
+        "PASSWORD_FORMATE_ERR": "Hasło musi składać się z jednej litery alfabetu, jednej cyfry i jednego znaku specjalnego.",
+        "LOCATION_ERR_MESSAGE": "Wymagana jest lokalizacja"
+    }
+}

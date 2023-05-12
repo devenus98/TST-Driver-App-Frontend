@@ -1,0 +1,33 @@
+ion-content {
+    --background: #eaeaea;
+}
+
+.wrapper {
+    .list_block {
+        background: #34b9eb;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 14px;
+        margin-bottom: 14px;
+        h5 {
+            font-size: 16px;
+            margin: 0;
+            color: #fff;
+         }
+         p {
+             margin: 5px 0 0;
+             font-size: 14px;
+              line-height: 18px;
+              color: #fff;
+         }
+    }
+    .seen-msg {
+        background: #fff;
+        h5 {
+            color: #000;
+        }
+        p {
+            color: #000;
+        }
+    }
+}

@@ -1,0 +1,139 @@
+<ion-header>
+    <ion-toolbar color="light">
+        <ion-buttons slot="start">
+            <ion-menu-button color="dark"></ion-menu-button>
+        </ion-buttons>
+        <ion-buttons slot="slot" class="btn-right">
+            <ion-back-button icon="close-outline" color="dark"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'MENU.MY_LEAVES' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="bubbles" refreshingText="Refreshing...">
+        </ion-refresher-content>
+    </ion-refresher>
+    <div class="tab-wrapper">
+
+        <ion-segment [(ngModel)]="tabList" scrollable color="dark">
+            <ion-segment-button value="approved">
+                {{'MY_LEAVES.APPROVED' | translate}} ({{approved?.length}})
+            </ion-segment-button>
+            <ion-segment-button value="suggested"> {{'MY_LEAVES.SUGGESTED' | translate}} ({{suggested?.length}})
+            </ion-segment-button>
+            <ion-segment-button value="pending">
+                {{'MY_LEAVES.PENDING' | translate}} ({{pending?.length}})
+            </ion-segment-button>
+            <ion-segment-button value="declined">
+                {{'MY_LEAVES.DECLINED' | translate}} ({{decline?.length}})
+            </ion-segment-button>
+        </ion-segment>
+
+        <div [ngSwitch]="tabList" class="segment-display">
+
+            <ion-list *ngSwitchCase="'approved'">
+                <div class="list_view">
+                    <!--- wrapper block --->
+                    <div class="wrapper-block" *ngFor="let a of approved">
+                        <ion-row>
+                            <ion-col size="6">
+                                <h4>{{a.leave_type}}</h4>
+                                <p>{{a.from_date}}</p>
+                            </ion-col>
+                            <ion-col size="6" class="ion-text-end">
+                                <h4>{{a.status_updated_by}}</h4>
+                                <p><span>{{'MY_LEAVES.APPROVED_ON' | translate}}</span> {{a.status_updated_date}}</p>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                    <!--- //wrapper block --->
+
+                </div>
+                <div class="no-record-wrap" *ngIf="approved?.length == 0">
+                    <img src="assets/imgs/no-record.png" alt="">
+                    <p>No record found</p>
+                </div>
+            </ion-list>
+
+            <ion-list *ngSwitchCase="'suggested'">
+                <div class="list_view">
+                    <!--- wrapper block --->
+                    <div class="sugs-block">
+                        <div class="leave--suggest" *ngFor="let s of suggested">
+                            <div class="topblock">
+                                <h4>{{'MY_LEAVES.SUGGESTED_HEAD' | translate}} ({{s?.leave_type}} {{s?.from_date}} {{s?.to_date}})</h4>
+                                <p>{{s?.suggested_from_date}} &nbsp;&nbsp; {{s?.suggested_to_date}}</p>
+                            </div>
+                            <div class="buttonblock">
+                                <h6>{{'MY_LEAVES.SUGGESTED_SUBHEAD' | translate}}</h6>
+                                <div class="action_button">
+                                    <ion-button (click)="acceptButton(s?.id)">{{'MY_LEAVES.ACCEPT' | translate}}</ion-button>
+                                    <ion-button class="btn-decline" (click)="declineButton(s?.id)">{{'MY_LEAVES.DECLINE' | translate}}</ion-button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--- //wrapper block --->
+
+                </div>
+                <div class="no-record-wrap" *ngIf="suggested?.length == 0">
+                    <img src="assets/imgs/no-record.png" alt="">
+                    <p>No record found</p>
+                </div>
+            </ion-list>
+            <ion-list *ngSwitchCase="'pending'">
+                <div class="list_view">
+                    <!--- wrapper block --->
+                    <div class="wrapper-block" *ngFor="let p of pending">
+                        <ion-row>
+                            <ion-col size="6">
+                                <h4>{{p.leave_type}}</h4>
+                                <p>{{p.from_date}}</p>
+                            </ion-col>
+                            <ion-col size="6" class="ion-text-end">
+                                <ion-button (click)="router.navigateByUrl('/editvacation/'+p.id)"><img src="assets/imgs/fi_edit.png" alt="">{{'ACTION.EDIT' | translate}}</ion-button>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                    <!--- //wrapper block --->
+
+                </div>
+                <div class="no-record-wrap" *ngIf="pending?.length == 0">
+                    <img src="assets/imgs/no-record.png" alt="">
+                    <p>No record found</p>
+                </div>
+            </ion-list>
+
+            <ion-list *ngSwitchCase="'declined'">
+                <div class="list_view">
+                    <!--- wrapper block --->
+                    <div class="wrapper-block" *ngFor="let d of decline">
+                        <ion-row>
+                            <ion-col size="6">
+                                <h4>{{d.leave_type}}</h4>
+                                <p>{{d.from_date}}</p>
+                            </ion-col>
+                            <ion-col size="6" class="ion-text-end">
+                                <h4>{{d.status_updated_by}}</h4>
+                                <p><span class="decline-text">{{'MY_LEAVES.DECLINED_ON' | translate}}</span> {{d.status_updated_date}}
+                                </p>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+
+                    <!--- //wrapper block --->
+                </div>
+                <div class="no-record-wrap" *ngIf="decline?.length == 0">
+                    <img src="assets/imgs/no-record.png" alt="">
+                    <p>No record found</p>
+                </div>
+            </ion-list>
+
+        </div>
+
+    </div>
+
+</ion-content>

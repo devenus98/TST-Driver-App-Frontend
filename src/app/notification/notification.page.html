@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-toolbar color="light">
+        <ion-buttons slot="start" class="btn-left">
+            <ion-back-button text="" icon="chevron-back-outline" color="dark"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'MENU.NOTIFICATION' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="ion-padding">
+        <div class="wrapper">
+            <!-- list block -->
+            <div class="list_block" *ngFor="let data of notificationData" [class.seen-msg]="data?.is_seen" (click)="getNotificationDataById(data?.id, data?.notification_type)">
+                <h5>{{data?.notification_text}}</h5>
+                <p>{{data?.date_time | date}}</p>
+            </div>
+            <!-- //list block -->
+        </div>
+    </div>
+</ion-content>

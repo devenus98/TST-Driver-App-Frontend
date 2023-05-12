@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start" class="btn-left">
+      <ion-back-button text="" icon="chevron-back-outline" color="dark"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{'LEAVE_REQUEST.UPDATE_LEAVE' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form action="" [formGroup]="form" (ngSubmit)="submitUpdateVacationForm()">
+    <div class="ion-padding">
+      <ion-list>
+
+
+        <ion-radio-group formControlName="leave_type">
+          <h4>{{'LEAVE_REQUEST.LEAVE_TYPE' | translate}}</h4>
+          <ion-item class="ion-no-padding">
+            <ion-label>{{'LEAVE_REQUEST.NORMAL' | translate}}</ion-label>
+            <ion-radio slot="start" value="Normal" mode="md"></ion-radio>
+          </ion-item>
+
+          <ion-item class="ion-no-padding">
+            <ion-label>{{'LEAVE_REQUEST.EMERGENCY' | translate}}</ion-label>
+            <ion-radio slot="start" value="Emergency" mode="md"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+
+        <div class="box-wrap">
+          <ion-row>
+            <ion-col size="6">
+              <h4>{{'LEAVE_REQUEST.FROM_DATE' | translate}}</h4>
+              <ion-item>
+                <ion-icon name="calendar-clear-outline"></ion-icon>
+                <ion-datetime displayFormat="DD MMM YYYY" placeholder="DD/MM/YYYY" formControlName="from_date">
+                </ion-datetime>
+              </ion-item>
+            </ion-col>
+            <ion-col size="6">
+              <h4>{{'LEAVE_REQUEST.TO_DATE' | translate}}</h4>
+              <ion-item>
+                <ion-icon name="calendar-clear-outline"></ion-icon>
+                <ion-datetime displayFormat="DD MMM YYYY" placeholder="DD/MM/YYYY" formControlName="to_date">
+                </ion-datetime>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </div>
+
+
+        <div class="box-wrap">
+          <h4>{{'LEAVE_REQUEST.MESSAGE' | translate}}</h4>
+
+          <ion-item>
+            <ion-textarea placeholder="{{'LEAVE_REQUEST.MESSAGE_PLACEHOLDER' | translate}}" value="Wife acute sickness"
+              formControlName="message"></ion-textarea>
+          </ion-item>
+        </div>
+      </ion-list>
+    </div>
+  </form>
+</ion-content>
+
+
+<ion-footer>
+  <ion-button (click)="submitUpdateVacationForm()" [disabled]="shouldDisabled">{{'LEAVE_REQUEST.SAVE' | translate}}
+  </ion-button>
+</ion-footer>

@@ -1,0 +1,362 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+
+/* Core CSS required for Ionic components to work properly */
+
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+@font-face {
+    font-family: 'proxima-nova-regular';
+    src: url('assets/webfont/proxima-nova-regular-webfont.woff');
+}
+
+@font-face {
+    font-family: 'proxima-nova-semibold-webfont';
+    src: url('assets/webfont/proxima-nova-semibold-webfont.woff');
+}
+
+@font-face {
+    font-family: 'proxima-nova-bold-webfont';
+    src: url('assets/webfont/proxima-nova-bold-webfont.woff');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'proxima-nova-bold-webfont';
+}
+
+p,
+input,
+textarea,
+ion-buttons {
+    font-family: 'proxima-nova-regular';
+}
+
+ion-input,
+ion-textarea,
+ion-datetime {
+    font-family: 'proxima-nova-regular'!important;
+}
+
+p {
+    font-size: 16px;
+    line-height: 25px;
+    color: #4F5556;
+}
+
+ion-button {
+    width: auto!important;
+    letter-spacing: .6px;
+}
+
+.button-solid {
+    background: transparent;
+}
+
+input:focus {
+    outline: none!important;
+}
+
+.btn-transparent {
+    --background: transparent!important;
+    --color: #000!important;
+    --box-shadow: none;
+    margin-top: 9px!important;
+    font-size: 1rem!important;
+}
+
+.ion-page {
+    top: 11px;
+}
+
+.button {
+    font-size: 17px;
+    line-height: 22px;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'proxima-nova-bold-webfont';
+    white-space: unset;
+    font-weight: 500;
+    height: 3rem;
+    --background: #00AEEF;
+    --border-radius: 4px;
+    text-transform: capitalize;
+}
+
+.button:focus {
+    outline: none!important;
+}
+
+.btn-pink {
+    --background: #D70080!important;
+}
+
+ion-header {
+    &:after {
+        background-image: none!important;
+    }
+    .button {
+        --background: transparent!important;
+        --color: #fff!important;
+        --box-shadow: none;
+        margin: 0!important;
+        font-size: 1.4rem!important;
+    }
+    ion-title {
+        font-family: 'proxima-nova-regular';
+        font-size: 17px;
+        text-transform: capitalize;
+        font-weight: 600;
+        img {
+            width: 60px;
+            margin: 6px 0 3px;
+        }
+    }
+    ion-title.md {
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    .ios.button {
+        font-size: .9rem !important
+    }
+    ion-buttons {
+        font-size: 22px;
+    }
+    .ios.btn-left {
+        margin-left: 15px;
+    }
+    .btn-right {
+        margin-right: 15px;
+        img {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+        }
+    }
+}
+
+.header-ios {
+    ion-toolbar {
+        --min-height: 60px;
+    }
+    ion-icon {
+        font-size: 28px;
+    }
+}
+
+ul {
+    li {
+        font-family: 'proxima-nova-regular';
+        font-size: 16px;
+        line-height: 25px;
+        color: #4F5556;
+    }
+}
+
+ion-content {
+    --background: #fff;
+}
+
+ion-footer {
+    &:before {
+        background-image: none!important;
+    }
+}
+
+ion-toast {
+    font-family: 'proxima-nova-regular'!important;
+}
+
+ion-label {
+    font-family: 'proxima-nova-regular'!important;
+}
+
+.searchbar-input.sc-ion-searchbar-md {
+    border: 1px solid #eae9e9;
+    border-radius: 6px;
+    font-size: 15px !important;
+    font-family: 'proxima-nova-regular' !important;
+    box-shadow: none !important;
+    background: #ffffff;
+}
+
+.searchbar-input.sc-ion-searchbar-ios {
+    border: 1px solid #eae9e9;
+    border-radius: 6px;
+    font-size: 15px !important;
+    font-family: 'proxima-nova-regular' !important;
+    box-shadow: none !important;
+    background: #ffffff;
+}
+
+.searchbar-input-container.sc-ion-searchbar-ios {
+    height: 48px;
+}
+
+ion-item,
+ion-select {
+    font-family: 'proxima-nova-regular'!important;
+}
+
+.alert-title.sc-ion-alert-md,
+.alert-title.sc-ion-alert-ios {
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.alert-radio-label.sc-ion-alert-md,
+.alert-radio-label.sc-ion-alert-ios {
+    padding-inline-start: 40px;
+    padding-inline-end: 22px;
+    font-size: 14px;
+}
+
+.alert-tappable.sc-ion-alert-md,
+.alert-tappable.sc-ion-alert-ios {
+    height: 40px;
+}
+
+.header-ios ion-toolbar:last-of-type {
+    --border-width: 0 0 0;
+}
+
+ion-segment {
+    border-radius: 0;
+    ion-segment-button {
+        text-transform: capitalize;
+        font-family: 'proxima-nova-regular';
+        letter-spacing: 0;
+        font-weight: 600;
+        --border-radius: 0;
+        border-radius: 0;
+    }
+    .segment-button-checked.ios {
+        border-bottom: 2px solid #0063F5;
+        --indicator-box-shadow: none;
+    }
+}
+
+.btn-deactive {
+    --background: #989a9a;
+}
+
+.sleepmode-alert {
+    text-align: center;
+    .alert-wrapper {
+        background: #FFFFFF;
+        border-radius: 10px;
+    }
+    .alert-message {
+        font-family: 'proxima-nova-bold-webfont';
+        color: #000;
+        font-size: 19px;
+        padding: 0 30px;
+    }
+    .alert-button-group {
+        justify-content: center;
+        padding: 30px 0 40px;
+        .alert-button {
+            font-family: 'proxima-nova-semibold-webfont';
+            padding: 10px 36px;
+            border-radius: 4px;
+            text-transform: capitalize;
+            font-size: 15px;
+            &:nth-child(1) {
+                background: #F8F7FA;
+                color: #000;
+            }
+            &:nth-child(2) {
+                background: #00AEEF;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.duty-class {
+    --width: 320px;
+    border-radius: 10px;
+}
+
+:root {
+    .popover-content {
+        left: 0 !important;
+        width: 100%;
+    }
+}
+
+.otp-input {
+    width: 40px !important;
+    height: 48px !important;
+}
+
+.action-sheet-button {
+    font-size: 17px !important;
+}
+
+ion-datetime {
+    font-size: 14px;
+}
+
+.no-record-wrap {
+    text-align: center;
+    position: relative;
+    z-index: 9;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img {
+        width: 60px;
+        margin-bottom: 8px;
+    }
+    p {
+        margin-top: 0;
+    }
+}
+
+.toast-success {
+    --background: rgba(15, 165, 115, 0.897);
+    --color: #fff;
+}
+
+.toast-info {
+    --background: rgba(53, 127, 223, 0.781);
+    --color: #fff;
+}
+
+.toast-error {
+    --background: rgba(230, 36, 29, 0.925);
+    --color: #fff;
+}

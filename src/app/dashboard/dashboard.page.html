@@ -1,0 +1,100 @@
+<ion-header>
+    <ion-toolbar color="light">
+        <ion-buttons slot="start">
+            <ion-menu-button color="dark"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>{{'MENU.DASHBOARD' | translate}}</ion-title>
+        <!--ion-buttons style="font-size: 30px;" slot="end" class="btn-right" (click)="router.navigateByUrl('/profile')">
+            <ion-icon name="person-circle"></ion-icon>
+        </ion-buttons-->
+        <ion-buttons style="font-size: 30px;" slot="end" class="btn-right notify-btn" (click)="router.navigateByUrl('/notification')">
+            <ion-icon name="notifications"></ion-icon>
+            <ion-badge>{{notCount}}</ion-badge>
+        </ion-buttons>
+        <!--    <ion-buttons slot="end" class="btn-right" (click)="router.navigateByUrl('/updateprofile')">-->
+        <!--      <img src="assets/imgs/fi_edit-3.png" alt="">-->
+        <!--    </ion-buttons>-->
+    </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="showProgress===false">
+    <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="bubbles" refreshingText="Refreshing...">
+        </ion-refresher-content>
+    </ion-refresher>
+    <div class="ion-padding">
+
+        <div class="profile-image">
+            <div class="ion-padding">
+                <div class="pro_image">
+                    <div class="content_upload">
+                        <img [src]="imageUrl ? imageUrl : 'assets/imgs/blank_user.png'" alt="">
+                        <ion-button class="btn-transparent" (click)="takePicture()">
+                            <ion-icon name="camera"></ion-icon>
+                        </ion-button>
+                    </div>
+                </div>
+            </div>
+            <h4>{{profileInfo.first_name}} {{profileInfo.last_name}}</h4>
+            <p>@{{profileInfo.username}}</p>
+        </div>
+        <!-- 
+        <div class="profile-img">
+        <div class="image-area">
+            <img src="assets/imgs/user.png" alt="">
+        </div>
+            <h4>{{profileInfo.first_name}} {{profileInfo.last_name}}</h4>
+            <p>@{{profileInfo.username}}</p>
+        </div> -->
+
+
+        <div class="wrapper">
+            <!---- list block ---->
+            <div class="list_block">
+                <ion-row>
+                    <ion-col size="2">
+                        <img src="assets/imgs/dash-ic-1.png" alt="">
+                    </ion-col>
+                    <ion-col size="5">
+                        <h4>{{'DASHBOARD.TOTAL_DUTY_HOURS' | translate}}</h4>
+                    </ion-col>
+                    <ion-col size="5" class="ion-text-end">
+                        <h2>{{profileInfo.duty_hour}}</h2>
+                    </ion-col>
+                </ion-row>
+            </div>
+            <!---- //list block ---->
+            <!---- list block ---->
+            <div class="list_block">
+                <ion-row>
+                    <ion-col size="2">
+                        <img src="assets/imgs/dash-ic-2.png" alt="">
+                    </ion-col>
+                    <ion-col size="4">
+                        <h4>{{'DASHBOARD.LEAVES_TAKEN' | translate}}</h4>
+                    </ion-col>
+                    <ion-col size="6" class="ion-text-end">
+                        <h2>{{minTwoDigits(profileInfo.total_leave)}}/26</h2>
+                    </ion-col>
+                </ion-row>
+            </div>
+            <!---- //list block ---->
+            <!---- list block ---->
+            <div class="list_block">
+                <ion-row>
+                    <ion-col size="2">
+                        <img src="assets/imgs/dash-ic-3.png" alt="">
+                    </ion-col>
+                    <ion-col size="4">
+                        <h4>{{'DASHBOARD.TRIPS_COMPLETED' | translate}}</h4>
+                    </ion-col>
+                    <ion-col size="6" class="ion-text-end">
+                        <h2>{{minTwoDigits(profileInfo.total_trips)}}</h2>
+                    </ion-col>
+                </ion-row>
+            </div>
+            <!---- //list block ---->
+        </div>
+
+    </div>
+</ion-content>

@@ -1,0 +1,117 @@
+<ion-header>
+    <ion-toolbar color="light">
+        <ion-buttons slot="start" class="btn-left">
+            <ion-back-button text="" icon="chevron-back-outline" color="dark"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'ONDUTY.REVIEW_LABEL' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="overviewData!==undefined">
+    <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="bubbles" refreshingText="Refreshing...">
+        </ion-refresher-content>
+    </ion-refresher>
+    <div class="ion-padding">
+
+        <div class="graph-length">
+
+            <!--**- Item Graph -**-->
+
+            <div class="date-block">
+                <p>{{overviewData.trip_start_date|date:'dd/MM/yyyy'}} {{overviewData.trip_start_date|date: 'EEEE'}}</p>
+            </div>
+
+            <div class="ride-info">
+
+                <!--- single list --->
+                <div class="single-list">
+                    <ion-row>
+                        <ion-col size="4">
+                            <p><img src="assets/imgs/dash-ic-1.png" alt="">{{'ONDUTY.START' | translate}}</p>
+                        </ion-col>
+                        <ion-col size="5">
+                            <h5>{{overviewData.trip_start_time}}</h5>
+                        </ion-col>
+                        <!--ion-col size="3" class="ion-text-end">
+                            <ion-button (click)="CreatePopover()">{{'ACTION.EDIT' | translate}}</ion-button>
+                        </ion-col-->
+                    </ion-row>
+                </div>
+                <!--- /single list --->
+            </div>
+
+            <!--**- //Item Graph -**-->
+
+            <div *ngFor="let sleepData of overviewData.sleep_data">
+                <div class="date-block">
+                    <p>{{sleepData.sleep_start_date|date:'dd/MM/yyyy'}} {{sleepData.sleep_start_date|date: 'EEEE'}}</p>
+                </div>
+
+                <div class="ride-info">
+
+                    <!--- single list --->
+                    <div class="single-list">
+                        <ion-row>
+                            <ion-col size="4">
+                                <p><img src="assets/imgs/sleep-vector2.png" alt="">{{'ONDUTY.END' | translate}}</p>
+                            </ion-col>
+                            <ion-col size="5">
+                                <h5>{{sleepData.sleep_start}}-{{sleepData.sleep_end}}</h5>
+                            </ion-col>
+                            <!--ion-col size="3" class="ion-text-end">
+                                <ion-button (click)="CreatePopover()">{{'ACTION.EDIT' | translate}}</ion-button>
+                            </ion-col--> 
+                            <!-- Zeiten ändern Funktion-->
+
+                        </ion-row>
+                    </div>
+                    <!--- /single list --->
+                </div>
+            </div>
+
+            <!--**- Item Graph -**-->
+
+            <div class="date-block">
+                <p>{{overviewData.trip_end_date|date:'dd/MM/yyyy'}} {{overviewData.trip_end_date|date: 'EEEE'}}</p>
+            </div>
+
+            <div class="ride-info">
+
+                <!--- single list --->
+                <div class="single-list">
+                    <ion-row>
+                        <ion-col size="4">
+                            <p><img src="assets/imgs/dash-ic-1.png" alt="">{{'ONDUTY.END' | translate}}</p>
+                        </ion-col>
+                        <ion-col size="5">
+                            <h5>{{overviewData.trip_end_time}}</h5>
+                        </ion-col>
+                        <!--ion-col size="3" class="ion-text-end">
+                            <ion-button (click)="CreatePopover()">{{'ACTION.EDIT' | translate}}</ion-button>
+                        </ion-col-->
+                    </ion-row>
+                </div>
+                <!--- /single list --->
+            </div>
+            <!--**- //Item Graph -**-->
+        </div>
+        <div class="total-hours">
+            <h6>Total</h6>
+            <ion-row>
+                <ion-col size="6">
+                    <h2>{{overviewData.total_duty_hour}}<span> {{'ONDUTY.HOURS' | translate}}</span></h2>
+                    <p><img src="assets/imgs/dash-ic-1.png" alt=""> {{'ONDUTY.TITLE' | translate}}</p>
+                </ion-col>
+                <ion-col size="6">
+                    <h2>{{overviewData.total_sleep_hour}}<span> {{'ONDUTY.HOURS' | translate}}</span></h2>
+                    <p><img src="assets/imgs/sleep-vector2.png" alt=""> {{'ONDUTY.SLEEP' | translate}}</p>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+    <div class="full-button">
+        <ion-button (click)="submitTrip()">{{'ACTION.SUBMIT' | translate}}</ion-button>
+    </div>
+
+</ion-content>

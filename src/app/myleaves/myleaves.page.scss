@@ -1,0 +1,119 @@
+ion-header {
+    ion-menu-button {
+        font-size: 26px!important;
+    }
+    .btn-right {
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+    .notify-btn {
+        position: relative;
+        ion-badge {
+            position: absolute;
+            right: -8px;
+            font-size: 10px;
+            font-weight: 100;
+            width: 21px;
+            height: 20px;
+            line-height: 14px;
+            text-align: center;
+            top: -5px;
+            border-radius: 50%;
+        }
+    }
+}
+
+
+
+
+
+ion-segment {
+    ion-segment-button {
+        font-size: 13px;
+        padding: 10px 0;
+    }
+}
+
+.list_view {
+    .wrapper-block {
+        padding: 8px 16px 6px;
+        border-bottom: 1px solid #f1f1f1;
+        h4 {
+            font-size: 18px;
+            color: #292929;
+            margin: 0;
+        }
+        p {
+            font-size: 12px;
+            line-height: 21px;
+            margin: 2px 0;
+            span {
+                font-family: 'proxima-nova-semibold-webfont';
+            }
+            .decline-text {
+                color: #D70080;
+            }
+        }
+        ion-button {
+            --background: transparent;
+            color: #00AEEF;
+            margin: 0;
+            --box-shadow: none;
+            font-family: "proxima-nova-regular";
+            font-size: 17px;
+            height: 2.4rem;
+            --padding-end: 6px;
+            --padding-start: 6px;
+            img {
+                width: 16px;
+                height: 16px;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .sugs-block {
+        padding: 22px 16px;
+        .leave--suggest {
+            background: #eaeaea;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 18px;
+            h4 {
+                font-size: 15px;
+                color: #292929;
+                margin: 0;
+            }
+            p {
+                font-size: 14px;
+                line-height: 21px;
+                margin: 10px 0 6px;
+            }
+            h6 {
+                font-size: 14px;
+                font-family: "proxima-nova-semibold-webfont";
+                border-top: 1px solid #ddd;
+                padding: 12px 0 6px;
+                margin: 12px 0 0;
+            }
+            ion-button {
+                font-size: 15px;
+                width: 48%!important;
+                height: 2.9rem;
+                margin-top: 10px!important;
+            }
+            .btn-decline {
+               --background: #D70080;
+            }
+        }
+    }
+}
+
+.no-record-wrap {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    padding: 180px 0 80px;
+}

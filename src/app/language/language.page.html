@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-toolbar color="light">
+        <ion-buttons slot="start" class="btn-left">
+            <ion-back-button text="" icon="chevron-back-outline" color="dark"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Select Language</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="ion-padding">
+        <ion-list>
+            <ion-radio-group (ionChange)="getSelectedData($event)" [(ngModel)]="selected_lang">
+
+                <ion-item class="ion-no-padding">
+                    <ion-label>English</ion-label>
+                    <ion-radio value="en" mode="md"></ion-radio>
+                </ion-item>
+
+                <ion-item class="ion-no-padding">
+                    <ion-label>German</ion-label>
+                    <ion-radio value="ge" mode="md"></ion-radio>
+                </ion-item>
+
+                <ion-item class="ion-no-padding">
+                    <ion-label>Polish</ion-label>
+                    <ion-radio value="pl" mode="md"></ion-radio>
+                </ion-item>
+
+                <ion-item class="ion-no-padding">
+                    <ion-label>Russian</ion-label>
+                    <ion-radio value="ru" mode="md"></ion-radio>
+                </ion-item>
+
+                <ion-item class="ion-no-padding">
+                    <ion-label>Turkey</ion-label>
+                    <ion-radio value="tr" mode="md"></ion-radio>
+                </ion-item>
+
+            </ion-radio-group>
+        </ion-list>
+    </div>
+</ion-content>
+
+<ion-footer>
+    <ion-button (click)="updateLanguage()">Update Button</ion-button>
+</ion-footer>

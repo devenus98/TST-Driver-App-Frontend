@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-toolbar color="light">
+        <ion-buttons slot="start" class="btn-left" (click)="router.navigateByUrl('/tabs/dashboard')">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-buttons>
+        <ion-title>{{'START.START_DUTY' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="bubbles" refreshingText="Refreshing...">
+        </ion-refresher-content>
+    </ion-refresher>
+    <div class="ion-padding">
+
+        <!---- card wrap ---->
+        <div class="card-wrap">
+
+            <div class="content-area">
+                <h4>{{'START.START_DATE' | translate}}</h4>
+
+                <h2>{{date}}</h2>
+                <p>(DD/MM/YY)</p>
+            </div>
+
+            <div class="button-btn">
+                <ion-button (click)="calendarModal()"><img src="assets/imgs/fi_edit.png" alt=""> {{'ACTION.EDIT' | translate}}
+                </ion-button>
+            </div>
+
+        </div>
+        <!---- //card wrap ---->
+
+        <!---- card wrap ---->
+        <div class="card-wrap">
+
+            <div class="content-area">
+                <h4>{{'START.START_TIME' | translate}}</h4>
+
+                <h2>{{selectedTime}}</h2>
+                <p>HH:MM</p>
+
+                <!-- <ion-datetime displayFormat="HH:mm" [(ngModel)]="minDate" (ionChange)="setDate()"></ion-datetime> -->
+            </div>
+
+            <div class="button-btn">
+                <ion-button (click)="showTimepicker()"><img src="assets/imgs/fi_edit.png" alt=""> {{'ACTION.EDIT' | translate}}
+                </ion-button>
+            </div>
+            <div class="error_ms" *ngIf="errorMsg">
+                <p>{{errorMsg}}</p>
+            </div>
+        </div>
+        <!---- //card wrap ---->
+
+
+    </div>
+</ion-content>
+
+
+<ion-footer *ngIf="showForm">
+    <ion-button [disabled]="!isBtnActive" (click)="pageRoute('onduty')">{{'START.START_DUTY' | translate}}</ion-button>
+</ion-footer>

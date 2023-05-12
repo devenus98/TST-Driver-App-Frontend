@@ -1,0 +1,55 @@
+<div class="ion-padding">
+    <div class="header-area">
+        <ion-button class="btn-transparent" (click)="ClosePopover()">
+            <ion-icon name="close-outline"></ion-icon>
+        </ion-button>
+    </div>
+    <ion-list>
+
+        <div class="box-wrap">
+            <h2 class="green-text">{{'ONDUTY.START' | translate}}</h2>
+            <ion-row>
+                <ion-col size="6">
+                    <h4>{{'ONDUTY.DATE' | translate}}</h4>
+                    <ion-item>
+                        <ion-icon name="calendar-clear-outline"></ion-icon>
+                        <ion-datetime displayFormat="DD MMM YYYY" (ionChange)="changeDate($event)" placeholder="DD/MM/YYYY"></ion-datetime>
+                    </ion-item>
+                </ion-col>
+                <ion-col size="6">
+                    <h4>{{'ONDUTY.TIME' | translate}}</h4>
+                    <ion-item>
+                        <ion-icon name="time-outline"></ion-icon>
+                        <ion-datetime displayFormat="HH mm" placeholder="hh:mm"></ion-datetime>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+        </div>
+
+        <div class="box-wrap">
+            <h2 class="red-text">{{'ONDUTY.END' | translate}}</h2>
+            <ion-row>
+                <ion-col size="6">
+                    <h4>{{'ONDUTY.DATE' | translate}}</h4>
+                    <ion-item>
+                        <ion-icon name="calendar-clear-outline"></ion-icon>
+                        <ion-datetime displayFormat="DD MMM YYYY" placeholder="DD/MM/YYYY"></ion-datetime>
+                    </ion-item>
+                </ion-col>
+                <ion-col size="6">
+                    <h4>{{'ONDUTY.TIME' | translate}}</h4>
+                    <ion-item>
+                        <ion-icon name="time-outline"></ion-icon>
+                        <ion-datetime displayFormat="HH mm" placeholder="hh:mm"></ion-datetime>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+        </div>
+
+    </ion-list>
+
+    <div class="btn-full">
+        <ion-button>{{'ACTION.SAVE' | translate}}</ion-button>
+    </div>
+
+</div>
